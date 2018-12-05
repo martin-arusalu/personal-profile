@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700');
+.mainCont {
+  background-color: hsl(202, 20%, 20%);
+  transition: background-color 2s linear, height 2s cubic-bezier(0,1,0,1), width 1s cubic-bezier(0,0.5,0,1);
+  position: fixed;
+  height: 0vh;
+  width: 92vw;
+  margin: 5vh 4vw 5vh 4vw;
+  color: #fff;
+  font-size: .7rem;
+  font-family: 'Muli', sans-serif;
+  font-weight: 600;
+  padding: 0;
+  letter-spacing: 3px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: -moz-scrollbars-none;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+.mainCont.loaded {
+  height: 90vh;
+  padding: 12vh 10vw 12vh 10vw;
+}
+.mainCont.toLeft {
+  width: 0;
+  padding: 0;
+}
+.mainCont .row div {
+  transition: opacity 1s ease-out;
+}
+.mainCont a, .mainCont a:hover, .mainCont a:active {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.mainCont a::before {
+  transition: all .2s ease;
+  color: #52adcc;
+  content: "{ ";
+  opacity: 0;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+.mainCont a::after {
+  transition: all .2s ease;
+  color: #52adcc;
+  content: " }";
+  opacity: 0;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+.mainCont a.active::before, .mainCont a:hover::before, .mainCont a.active::after, .mainCont a:hover::after {
+  opacity: 1;
+}
+.header {
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.logo {
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.links {
+  text-align: right;
+}
+.title {
+  margin-top: 15vh;
+  padding-left: 10vw;
+}
+.subTitle {
+  padding-left: 0;
+}
+.title h1 {
+  letter-spacing: 5px;
+  font-weight: 200;
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  font-size: 4em;
+  text-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+}
+.lightBlue {
+  color: #52adcc;
+}
+.underText {
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  margin-bottom: .5em;
+}
+.location {
+  transition: all 2s cubic-bezier(0,0,0,1);
+  opacity: 0;
+  padding-top: 10vh;
+  display: block;
+}
+.location img {
+  height: 3em;
+}
+.noPadding {
+  padding: 0;
+}
+.locationSvg {
+  height: 1.5em;
+}
+.locationText {
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.vectorSvg, .vector {
+  transition: right 2s cubic-bezier(0,1,0,1), opacity 1s ease-out !important;
+  display: fixed;
+  right: -100vw;
+  top: 10vh;
+  height: 35em;
+}
+.vectorSvg.loaded, .vector.loaded {
+  right: -10vw;
+}
+#rect1, #rect2, #aboutText, #worksText,
+#hypoxiPath, #haudiPath, #llrPath, #loengusPath, #fairtradePath,
+#hypoxiText, #haudiText, #llrText, #loengusText, #fairtradeText,
+#hypoxiRect, #haudiRect, #llrRect, #loengusRect, #fairtradeRect {
+  transition: opacity .5s ease-in;
+  cursor: pointer;
+}
+#hypoxiPath, #haudiPath, #llrPath, #loengusPath, #fairtradePath,
+#hypoxiText, #haudiText, #llrText, #loengusText, #fairtradeText,
+#hypoxiRect, #haudiRect, #llrRect, #loengusRect, #fairtradeRect {
+  opacity: 0;
+}
+.vectorSvg .st0{
+  fill:#FFFFFF;
+}
+.st1{
+  fill:#212528;
+}
+.vectorSvg .st3{
+  font-size:36px;
+}
+.st4{
+  letter-spacing:3;
+}
+.st2{
+  font-size:16px;
+}
+.st3{
+  letter-spacing:1;
+}
+.worksSvg {
+  transition: opacity 1s ease-out;
+  display: block;
+  margin: auto;
+  margin-top: -10vh;
+}
+.worksSvg .st1 {
+  fill: #fff;
+}
+.subTitle {
+  transition: opacity 1s ease-out;
+  padding-top: 5em;
+  padding-bottom: 0;
+  opacity: 0;
+}
+.subTitle div {
+  padding: 0;
+}
+.aboutMeText, .workText {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  letter-spacing: 0;
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+.workText a {
+  color: #52adcc;
+}
+.profileImage {
+  transition: opacity 1s ease-out;
+  background: url('../img/profileSmall.jpg');
+  background-size: cover;
+  border-radius: 40% 0 40% 40%;
+  margin-top: 10vh;
+  opacity: 0;
+  height: auto;
+}
+.overlay {
+  display: none;
+}
+.contact img {
+  height: 3em;
+}
+.contact a::before, .contact a::after, .location a::before, .location a::after, .workImage a::before, .workImage a::after {
+  content: "";
+}
+.workImage img {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  max-width: 100%;
+  margin-top: 8vh;
+}
+.worksSvg2 {
+  display: none;
+}
+
+@media (max-width: 767px) { 
+  .logo, .links {
+    text-align: center;
+  }
+  .vector {
+    display: none;
+  }
+  .title {
+    padding-left: 0;
+    margin-top: 10vh;
+  }
+  .profileImage {
+    height: 80vw;
+  }
+  .worksSvg {
+    display: none;
+  }
+  .worksSvg2 {
+    display: inline-block;
+  }
+  .title h1 {
+    letter-spacing: 3px;
+    font-weight: 100;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    font-size: 3em;
+    text-shadow: none;
+  }
+ }
+ @media (max-width: 1199px) {
+  .vectorSvg {
+    height: 30em;
+  }
+ }
+ @media (max-width: 991px) {
+  .vectorSvg {
+    height: 22em;
+  }
+ }
+ @media (max-height: 500px) {
+  .vectorSvg {
+    height: 20em;
+  }
+ }
